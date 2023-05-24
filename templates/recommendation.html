@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>VSAG</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 style="margin-top: 2%;">Recommendation System</h1>
+        <p>Let's see where will you end up eating your food. Use this software to get <br>recommendation for Restaurants, Cuisines and Many more.</p>
+        <div style="margin-top: 4%;">
+            <form action="/recommendation" method="POST">
+                <h4>View topmost recommendatons according to the features</h4>
+                <button type="submit" id='view1' class="btn btn-success" name="type" value="name">Outlets</button>
+                <button type="submit" id='view1' class="btn btn-danger" name="type" value="cuisines">Cuisines</button>
+                <button type="submit" id='view1' class="btn btn-warning" name="type" value="location">Location</button>
+                <button type="submit" id='view1' class="btn btn-primary" name="type" value="rest_type">Restaurant Type</button>
+            </form>
+        </div>
+        <div>
+            <h4 style="margin-top: 4%;">Restaurants according to the dining</h4>
+            <form action="/restType" method="POST" class="form-inline">
+                <div class="form-group">
+                    <select class="form-control" id="restype" name="restType">
+                      <option value="Casual Dining">Casual Dining</option>
+                      <option value="Quick Bites">Quick Bites</option>
+                      <option value="Fine Dining">Fine Dining</option>
+                      <option value="Bar">Bar</option>
+                      <option value="Café">Café</option>
+                      <option value="Dessert Parlor">Dessert Parlor</option>
+                      <option value="Bakery">Bakery</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 10px;">Recommend</button>
+                </div>
+            </form>
+        </div>
+        <div>
+          <h4 style="margin-top: 4%;">Restaurants famous for the cuisines</h4>
+          <form action="/onCuisine" method="POST" class="form-inline">
+              <div class="form-group">
+                  <select class="form-control" name="onCuisine">
+                    <option value="North Indian">North Indian</option>
+                    <option value="Fast Food">Fast Food</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Maharashtrian">Maharashtrian</option>
+                    <option value="Biryani">Biryani</option>
+                    <option value="South Indian">South Indian</option>
+                    <option value="Street Food">Street Food</option>
+                    <option value="Pizza">Pizza</option>
+                  </select>
+                  <button type="submit" class="btn btn-primary" style="margin-left: 10px;">Recommend</button>
+              </div>
+          </form>
+        </div>
+        <div>
+            <h4 style="margin-top: 4%;">Budget Restaurants at location with restaurant type</h4>
+            <form action="/inBudget" method="POST" class="form-inline">
+                <div class="form-group">
+                    <select class="form-control" name="locationf">
+                      <option value="Hinjawadi">Hinjawadi</option>
+                      <option value="Akurdi">Akurdi</option>
+                      <option value="Shivaji Nagar">Shivaji Nagar</option>
+                      <option value="Hadapsar">Hadapsar</option>
+                      <option value="Kothrud">Kothrud</option>
+                      <option value="Wakad">Wakad</option>
+                      <option value="Baner">Baner</option>
+                    </select>
+                    <select class="form-control" name="type" style="margin-left:10px; margin-right:10px;">
+                      <option value="Casual Dining, Bar">Casual Dining, Bar</option>
+                      <option value="Quick Bites">Quick Bites</option>
+                      <option value="Fine Dining">Fine Dining</option>
+                      <option value="Café">Café</option>
+                      <option value="Dessert Parlor">Dessert Parlor</option>
+                      <option value="Bakery">Bakery</option>
+                      <option value="Dhaba">Dhaba</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="₹ Budget" name = 'range' >
+                    <!-- <small class="form-text text-muted">Enter interger only. Do not enter any special characters</small> -->
+                    <button type="submit" class="btn btn-primary" style="margin-left: 10px;">Recommend</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
